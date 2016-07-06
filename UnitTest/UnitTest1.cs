@@ -44,11 +44,12 @@ namespace UnitTest
         [TestMethod]
         public void InputIs30()
         {
+            //Arrange 
             int input = 30;
             FizzBuzzLogic x = new FizzBuzzLogic();
-
+            //Act
             string outPut = x.FizzBuzzer(input);
-
+            //Assert
             Assert.AreEqual("FizzBuzz", outPut);
         }
 
