@@ -11,6 +11,7 @@ namespace Application
         int fizzBase = 3;
         int buzzBase = 5;
         
+        
 
         internal bool FizzChecker(int check)
         {
@@ -26,18 +27,20 @@ namespace Application
         public string   FizzBuzzer(int input)
         {
             string output = input.ToString();
+            bool isFizz = FizzChecker(input);
+            bool isBuzz = BuzzChecker(input);
 
-            if (FizzChecker(input))
+            if (isFizz)
             {
                 output =  "Fizz";
             }
             
-            if (BuzzChecker(input))
+            if (isBuzz)
             {
                 output = "Buzz";
             }
 
-            if(FizzChecker(input) && BuzzChecker(input))
+            if(isFizz && isBuzz)
             {
                 output = "FizzBuzz";
             }
